@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: hh 1441211576@qq.com
+ * @Date: 2024-02-21 13:55:34
+ * @LastEditors: hh 1441211576@qq.com
+ * @LastEditTime: 2024-02-21 18:14:56
+ * @FilePath: \cloud-music\src\App.js
+ * @Description: 根组件
+ *
+ */
+import React from "react";
+
+import { GlobalStyle } from "./style";
+import { IconStyle } from "./assets/iconfont/iconfont";
+import { SetRoutes } from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle></GlobalStyle>
+      <IconStyle></IconStyle>
+      <i className="iconfont">&#xe62b;</i>
+      <SetRoutes/>
+      {/* <AllRouter /> */}
     </div>
   );
 }

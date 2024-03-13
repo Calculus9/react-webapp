@@ -2,7 +2,7 @@
  * @Author: hh 1441211576@qq.com
  * @Date: 2024-02-21 14:35:42
  * @LastEditors: hh 1441211576@qq.com
- * @LastEditTime: 2024-02-21 16:10:51
+ * @LastEditTime: 2024-03-13 15:33:39
  * @FilePath: \cloud-music\src\routes\index.js
  * @Description:
  * 路由文件
@@ -11,7 +11,7 @@
 import React from "react";
 import { Navigate, useRoutes,BrowserRouter } from "react-router-dom";
 import Home from "../application/Home/index.js";
-import Recommend from "../application/Recommend/idnex.js";
+import Recommend from "../application/Recommend/index.js";
 import Singer from "../application/Singer/index.js";
 import Rank from "../application/Rank/index.js";
 

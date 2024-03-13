@@ -8,40 +8,39 @@
  *
  */
 import React, { useEffect, useState } from "react";
-import "./index.css";
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "./index.css";
+import { SliderContainer } from "./style";
 
 function Slider(props) {
   const { bannerList } = props;
   return (
-    <Swiper
-      // install Swiper modules
-      // modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={2}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {bannerList.map((d) => {
-        return (
-          <SwiperSlide>
-            <img src={d.src} alt={d.src} />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <div style={{position:"relative"}}>
+      <Swiper
+        loop
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {bannerList.map((d) => {
+          return (
+            <SwiperSlide className="slider-width">
+              <img src={d.src} alt={d.src} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      <SliderContainer ></SliderContainer>
+    </div>
   );
 }
 export default React.memo(Slider);

@@ -20,7 +20,7 @@ function App() {
       <div>
         <GlobalStyle></GlobalStyle>
         <IconStyle></IconStyle>
-        <i className="iconfont">&#xe62b;</i>
+        {/* <i className="iconfont">&#xe62b;</i> */}
         {/* <RouterProvider router={routerMap} /> */}
         <SetRoutes />
       </div>

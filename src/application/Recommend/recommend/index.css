@@ -1,0 +1,16 @@
+.recommendWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recommendItem{
+    width: 32%;
+    margin: 3px auto;
+}
+
+.recommendItem img{
+    width: 100%;
+    border-radius: 5px;
+}
